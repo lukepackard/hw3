@@ -4,6 +4,10 @@
 
 
 <ul>
+  <% for company in @places %>
+    <li>
+      <a href= "/companies/<%= places["id"]%>"><%= place ["name"] %></a>
+
 
 </ul>
 
@@ -12,5 +16,5 @@
 </p>
 
 <p>
-  <a href="">Back to All Places</a>
+  <a href="/places">Back to All Places</a>
 </p>

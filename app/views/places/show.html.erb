@@ -4,11 +4,12 @@
 
 
 <ul>
-  <% for company in @places %>
+  <% for place in @places %>
     <li>
-      <a href= "/companies/<%= places["id"]%>"><%= place ["name"] %></a>
-
-
+      <a href= "/places/<%= ["id"]%>">
+        <%= place["name"] %>
+      </a>
+    </li>
 </ul>
 
 <p>

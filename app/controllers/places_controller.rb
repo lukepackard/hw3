@@ -2,14 +2,13 @@ class PlacesController < ApplicationController
 
 def index 
   #puts 
-    render :template => "places/index"
   @places = Place.all 
   # render :template => "places/index"
 end 
 
 def show 
   @place = Place.find_by({"id" => params["id"]}) 
-
+  @entries =Entries.where({"place_id" => @place["id"]})
 end
 
 def new
@@ -19,11 +18,11 @@ end
 def create 
 
   @place = Place.new
-  @place["title"] = params["title"]
-  @place["description"] = params["description"]
-  @place["posted on"] = params["posted_on"]
+
+  @place["name"] = params["location"]
+  @place["created_at"] = params["posted on"]
   
-@Place.save
+@place.save
 
   redirect_to "/places"
 

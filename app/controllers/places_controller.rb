@@ -7,11 +7,18 @@ def index
 end 
 
 def show 
-  @place = Place.find_by({"id" => params["id"]}) 
-  @entries =Entries.where({"place_id" => @place["id"]})
+    @place = Place.find(params[:id])
+ # @entries =Entries.where({"place_id" => @place["id"]})
+
+ <p>
+  <a href="/entries/new?place_id=<%= @place.id %>">New entry for <%= @place.name %></a>
+</p>
+
 end
 
 def new
+
+  @place = Place.new 
 
 end
 

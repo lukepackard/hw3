@@ -11,7 +11,18 @@ end
     def create
       @entry = Entry.new(params["entry"])
       @entry.save
-      redirect_to "/places/#{@place.place.id}"
+
+      @place ["place_id"] = "params["place_id]"
+
+
+      redirect_to "/places/#{@entry.place.id}"
     end
+
+    def show 
+      <p>
+      <a href="/entries/new?place_id=<%= @place.id %>">New entry for <%= @place.name %></a>
+    </p>
+    end
+
 end
 

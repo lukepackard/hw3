@@ -6,6 +6,7 @@ class EntriesController < ApplicationController
 def new 
   @entry = Entry.new
   @entry.place_id = params["place_id"]
+  @place = place.find_by ({"id" => params["place_id"] })
 end
 
     def create

@@ -8,8 +8,8 @@ end
 
 def show 
     @place = Place.all
-    @places = Place.find(params[:id])
-    @entries = Entry.where(place_id: @places.id)
+    @place = Place.find(params[:id])
+    @entries = Entry.where(place_id: @place.id)
 
 end
 

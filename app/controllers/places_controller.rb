@@ -7,9 +7,9 @@ def index
 end 
 
 def show 
-    @place = Place.find(params[:id])
-    @places = Place.all
-  @entry =Entry.where({"place_id" => @place["id"]})
+    @place = Place.all
+    @places = Place.find(params[:id])
+    @entries = Entry.where(place_id: @places.id)
 
 end
 

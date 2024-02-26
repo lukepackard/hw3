@@ -1,19 +1,19 @@
 
 
-<h1><%= @place.name %></h1>
-<p>Description: <%= @place.description %></p>
+<h1><%= @places.name %></h1>
+
 <ul>
-  <% for place in @places %>
+  <% for entry in @entries %>
     <li>
       <a href="/places/<%= place.id %>">
         <%= place.name %>
       </a>
     </li>
-  <% end %>
+<% end %>
 </ul>
 <p>
-  <a href="/places/new">New Contact</a>
+  <a href="/places/new?place_id=<%= @place.id %>"><New Contact</a>
 </p>
 <p>
-  <a href="/places">Back to All Places</a>
+  <a href="/places"><Back to All Places</a>
 </p>

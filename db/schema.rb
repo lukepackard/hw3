@@ -26,16 +26,4 @@ ActiveRecord::Schema[7.1].define(version: 2022_02_10_225503) do
     t.datetime "updated_at", null: false
   end
 
-# Mexico city = Place.new 
-# Mexico city["name"] = "Mexico City"
-# Mexico city["posted_on"] = '01-01-2022'
-# Mexico city.save 
-
-# Austin = Place.new 
-# Austin ["name"] = "Mexico City"
-# Austin ["posted_on"] = '01-01-2022'
-# Austin.save 
-
 end
-
-
